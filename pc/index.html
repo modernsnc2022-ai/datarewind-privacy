@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Recovery Doctor PC 연결 안내 · DataRewind</title>
+<meta name="description" content="DataRewind에서 PC용 Recovery Doctor로 연결하는 공식 안내. 안전한 USB 연결과 출시 상태를 확인하세요.">
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#effbff;background:#061a2b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 90% 0,#175a80,transparent 42%),#061a2b;line-height:1.65}
+main{width:min(760px,calc(100% - 32px));margin:32px auto 80px}
+h1{font-size:clamp(28px,5vw,42px);margin:4px 0 8px}h2{font-size:21px;margin:0 0 8px}
+p{margin:8px 0}.muted{color:#b3cfe1}.eyebrow{font-size:13px;letter-spacing:.12em;color:#68e6f7}
+.panel{background:#102e48;border:1px solid #2676a0;border-radius:20px;padding:22px;margin:17px 0}
+.highlight{border:2px solid #45d9ed;background:linear-gradient(145deg,#145b82,#0d2944)}
+.tag{display:inline-block;padding:4px 11px;background:#1b536e;color:#a9fae7;border-radius:99px;font-size:13px;font-weight:700}
+ol{padding-left:24px}li{padding:7px 0}
+button,.button{display:inline-block;padding:12px 18px;border-radius:12px;background:#21617b;color:#fff;text-decoration:none;font-weight:700;border:0}
+.disabled{opacity:.65;cursor:not-allowed}.notice{color:#a9fae7;font-weight:700}
+small{color:#bfd8e6}a{color:#8cecff}a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+</style>
+</head>
+<body>
+<main>
+<p class="eyebrow">DATAREWIND · PC HANDOFF</p>
+<h1>Recovery Doctor로 추가 검사</h1>
+<p class="muted">휴대폰에서 찾지 못한 파일을 PC에서 추가로 살펴보려면 아래 순서를 확인하세요.</p>
+<section class="panel highlight" aria-labelledby="availability">
+<span class="tag">공개 배포 준비 중</span>
+<h2 id="availability">PC용 Recovery Doctor 설치 안내</h2>
+<p>현재 공식 Windows 설치 파일과 Microsoft Store 제품 링크가 공개되지 않았습니다. 준비되지 않은 프로그램의 설치나 자동 실행을 안내하지 않습니다.</p>
+<button type="button" class="disabled" disabled aria-disabled="true">공식 다운로드 준비 중</button>
+<p class="muted"><small>공식 배포가 준비되면 이 페이지에서 검증된 설치 경로를 안내합니다. 비공식 설치 파일을 내려받지 마세요.</small></p>
+</section>
+<section class="panel">
+<h2>휴대폰과 PC 연결 순서</h2>
+<ol>
+<li><strong>USB 데이터 케이블로</strong> Android 휴대폰을 Windows PC에 연결합니다.</li>
+<li>PC용 Recovery Doctor가 공식 배포된 후 PC에서 설치·실행합니다. USB를 연결했다고 PC 프로그램이 자동 설치되지는 않습니다.</li>
+<li>PC에서 연결 상태, 장치 읽기 가능 여부와 암호화 등 제약을 먼저 진단합니다.</li>
+<li>휴대폰에서 요구하는 접근 승인을 직접 확인하고, 본인이 선택한 범위의 검사만 진행합니다.</li>
+</ol>
+</section>
+<section class="panel">
+<h2>원본 보호 안내</h2>
+<p>원본에 쓰기·초기화·루팅·부트로더 변경을 시도하지 마세요. USB/ADB 연결만으로 암호화된 내부 저장소의 삭제 데이터를 복구할 수 있다는 뜻은 아닙니다. 진단 및 복구 결과는 기기 상태와 실제 접근 권한에 따라 달라집니다.</p>
+<p>이미 DataRewind에서 확인한 단서가 있다면 앱의 <strong>.rdcase 인계</strong> 기능을 이용할 수 있습니다. 이 파일은 휴대폰 내부 저장소의 원시 이미지가 아닙니다.</p>
+</section>
+<p class="muted"><small>DataRewind 공식 PC 연결 안내 · <a href="../">개인정보 처리방침</a></small></p>
+</main>
+</body>
+</html>
