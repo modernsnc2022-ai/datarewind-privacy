@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "product": "Recovery Doctor (Windows)",
+  "distribution_status": "not_published",
+  "installer_url": null,
+  "microsoft_store_url": null,
+  "verified_installer_sha256": null,
+  "custom_protocol": null,
+  "updated_at": "2026-09-25",
+  "notes": "Set real verified official installer or Store URL only after publication. This manifest is public status metadata, not a remote execution endpoint."
+}
