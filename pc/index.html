@@ -27,10 +27,10 @@ small{color:#bfd8e6}a{color:#8cecff}a:focus-visible{outline:3px solid #fff;outli
 <h1>Recovery Doctor로 추가 검사</h1>
 <p class="muted">휴대폰에서 찾지 못한 파일을 PC에서 추가로 살펴보려면 아래 순서를 확인하세요.</p>
 <section class="panel highlight" aria-labelledby="availability">
-<span class="tag">공개 배포 준비 중</span>
+<span id="release-tag" class="tag">공개 배포 준비 중</span>
 <h2 id="availability">PC용 Recovery Doctor 설치 안내</h2>
-<p>현재 공식 Windows 설치 파일과 Microsoft Store 제품 링크가 공개되지 않았습니다. 준비되지 않은 프로그램의 설치나 자동 실행을 안내하지 않습니다.</p>
-<button type="button" class="disabled" disabled aria-disabled="true">공식 다운로드 준비 중</button>
+<p id="release-description">현재 공식 Windows 설치 파일과 Microsoft Store 제품 링크가 공개되지 않았습니다. 준비되지 않은 프로그램의 설치나 자동 실행을 안내하지 않습니다.</p>
+<div id="download-links"><button type="button" class="disabled" disabled aria-disabled="true">공식 다운로드 준비 중</button></div>
 <p class="muted"><small>공식 배포가 준비되면 이 페이지에서 검증된 설치 경로를 안내합니다. 비공식 설치 파일을 내려받지 마세요.</small></p>
 </section>
 <section class="panel">
@@ -49,5 +49,57 @@ small{color:#bfd8e6}a{color:#8cecff}a:focus-visible{outline:3px solid #fff;outli
 </section>
 <p class="muted"><small>DataRewind 공식 PC 연결 안내 · <a href="../">개인정보 처리방침</a></small></p>
 </main>
+<script>
+(async () => {
+  // Fail closed: the public status document is the only deployment switch.
+  // This code never starts an installation or probes the connected device.
+  let status;
+  try {
+    const response = await fetch('./distribution.json', {cache: 'no-store'});
+    if (!response.ok) return;
+    status = await response.json();
+  } catch (_) { return; }
+  if (!status || status.distribution_status !== 'published') return;
+  const validUrl = (candidate, kind) => {
+    if (typeof candidate !== 'string') return null;
+    let u;
+    try { u = new URL(candidate); } catch (_) { return null; }
+    if (u.protocol !== 'https:' || u.username || u.password || u.search || u.hash) return null;
+    if (kind === 'store' && u.hostname === 'apps.microsoft.com' &&
+        u.pathname.startsWith('/detail/')) return u.href;
+    if (kind === 'installer' && u.hostname === 'github.com' &&
+        u.pathname.startsWith('/modernsnc2022-ai/Recovery-Doctor/releases/download/')) return u.href;
+    return null;
+  };
+  const store = validUrl(status.microsoft_store_url, 'store');
+  const hashOk = typeof status.verified_installer_sha256 === 'string' &&
+    /^[0-9a-fA-F]{64}$/.test(status.verified_installer_sha256);
+  const installer = hashOk ? validUrl(status.installer_url, 'installer') : null;
+  if (!store && !installer) return;
+  const holder = document.getElementById('download-links');
+  holder.replaceChildren();
+  for (const [label, link] of [['Microsoft Store에서 보기', store],
+                               ['공식 설치 파일 받기', installer]]) {
+    if (!link) continue;
+    const a = document.createElement('a');
+    a.className = 'button';
+    a.href = link;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.textContent = label;
+    a.style.marginRight = '10px';
+    holder.appendChild(a);
+  }
+  document.getElementById('release-tag').textContent = '공식 배포 링크 확인';
+  document.getElementById('release-description').textContent =
+    '아래 링크는 PC용 공식 배포 경로입니다. PC에서 링크를 열고 직접 설치를 승인하세요.';
+  if (installer) {
+    const note = document.createElement('p');
+    note.className = 'muted';
+    note.textContent = '설치 파일 SHA-256: ' + status.verified_installer_sha256;
+    holder.appendChild(note);
+  }
+})();
+</script>
 </body>
 </html>
