@@ -1,11 +1,13 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "product": "Recovery Doctor (Windows)",
-  "distribution_status": "not_published",
+  "distribution_status": "official_site_live_download_locked",
+  "official_product_url": "https://recoverydoctor.gdglobal.kr/",
+  "official_distribution_url": "https://recoverydoctor.gdglobal.kr/download/",
   "installer_url": null,
   "microsoft_store_url": null,
   "verified_installer_sha256": null,
   "custom_protocol": null,
-  "updated_at": "2026-09-25",
-  "notes": "Set real verified official installer or Store URL only after publication. This manifest is public status metadata, not a remote execution endpoint."
+  "updated_at": "2026-10-06",
+  "notes": "Official Recovery Doctor product/download site is live. Installer and Microsoft Store links remain null until the Windows release is actually published and sealed."
 }
