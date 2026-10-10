@@ -1,36 +1,38 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DataRewind 개인정보처리방침 / Privacy Policy</title>
-<meta name="description" content="DataRewind Android app privacy policy in Korean and English">
+<meta name="description" content="DataRewind external-storage recovery privacy policy in Korean and English">
 <style>body{margin:0;background:#f4f8fa;color:#143044;font-family:system-ui,-apple-system,'Malgun Gothic',sans-serif;line-height:1.7}main{max-width:850px;margin:36px auto;padding:24px 30px;background:white;border:1px solid #d9e8ec;border-radius:14px}h1,h2{line-height:1.35;color:#064a67}nav a{margin-right:20px}small{color:#4c6470}section{margin-top:35px}a{color:#08769a}li{margin-bottom:5px}@media(max-width:650px){main{margin:0;border:0;border-radius:0;padding:20px}}</style></head><body><main>
 <h1>DataRewind 개인정보처리방침<br><small>Privacy Policy</small></h1>
-<p>시행일 / Effective date: 2026-09-23</p><nav><a href="#ko">한국어</a><a href="#en">English</a></nav>
+<p>시행일 / Effective date: 2026-10-10</p><nav><a href="#ko">한국어</a><a href="#en">English</a></nav>
 <section id="ko" lang="ko"><h2>1. 앱과 처리 범위</h2>
-<p>DataRewind은 이용자가 직접 시작한 데이터 복구·단서 확인 작업을 휴대폰에서 수행하는 Android 앱입니다. Android에서 허용된 범위와 이용자가 명시적으로 승인한 데이터만 읽습니다.</p>
-<ul><li>해당 접근 권한이 허용된 사진, 동영상, 오디오 및 Android 휴지통 원본</li><li>이용자가 시스템 폴더 선택기로 직접 선택한 문서·다운로드 등 파일</li><li>이용자가 연결하고 접근 권한을 승인한 USB/SD 외부 저장장치</li></ul>
-<p>앱은 Android가 접근을 허용하지 않는 내부 UFS/userdata의 영구 삭제 바이트를 직접 RAW 복구한다고 주장하지 않습니다.</p>
-<h2>2. 이용 목적 및 처리 방식</h2>
-<p>검사, 복구 단서 분류, 로컬 미리보기, SHA-256 무결성 검증·동일 바이트 비교, 이용자가 요청한 복구 파일 내보내기 또는 .rdcase 인계 파일 생성에 사용합니다. 일반적으로 접근 가능한 기존 파일은 삭제 원본의 복구 성과로 표시하지 않습니다. USB/SD 원본에는 RAW 소스 쓰기 SCSI 명령을 실행하지 않습니다. Android 휴지통 원본 복원은 이용자가 시스템 승인 화면에서 동의한 경우에만 실행합니다.</p>
-<h2>3. 서버 전송 및 제3자 제공</h2>
-<p>현재 앱은 Android INTERNET 권한을 요청하지 않으며 복구 자료를 개발자 서버로 전송하지 않습니다. 광고 SDK, 분석 추적 SDK, 앱 계정 기능이 없습니다. 이용자가 직접 Downloads 또는 시스템 파일 선택기에서 지정한 저장 위치에 내보낼 수 있으며, 클라우드 제공자를 선택한 경우 해당 제공자의 별도 처리방침이 적용될 수 있습니다.</p>
+<p>DataRewind은 사용자가 직접 연결하고 승인한 외장 저장장치의 복구 작업을 휴대폰에서 수행하는 Android 앱입니다.</p>
+<ul><li>USB 메모리</li><li>USB/OTG 외장 저장장치</li><li>지원되는 USB/OTG 카드리더에 연결한 SD카드</li></ul>
+<p>현재 v4는 휴대폰 사진·동영상·오디오 라이브러리 전체 접근 권한을 요청하지 않으며, 휴대폰 내부 저장소에서 삭제된 사진·동영상 복구를 제공한다고 주장하지 않습니다.</p>
+<h2>2. 처리 목적</h2>
+<p>외장 저장장치의 파일시스템 확인, 읽기 전용 RAW/시그니처 검색, 복구 후보 미리보기·검색·필터, SHA-256 무결성 확인, 사용자가 요청한 복구 파일 내보내기에 사용합니다.</p>
+<h2>3. 서버 전송</h2>
+<p>현재 앱은 Android INTERNET 권한을 요청하지 않으며 복구 자료를 개발자 서버로 전송하지 않습니다. 광고 SDK, 분석 SDK, 앱 계정 기능이 없습니다.</p>
 <h2>4. 보관 및 삭제</h2>
-<p>복구 후보, 임시 인계 파일 및 작업 증거 로그는 앱 내부 저장소에 생성될 수 있습니다. 앱의 '앱 내부 임시 복구자료 삭제'를 이용하여 삭제할 수 있습니다. 원본 USB/SD, 원본 휴대폰 파일과 이미 외부로 내보낸 자료는 이 기능으로 삭제되지 않습니다. 임시 복구자료는 Android 클라우드 백업 및 기기간 전송에서 제외하도록 설정했습니다.</p>
-<h2>5. 권한 및 선택 범위</h2>
-<p>권한은 해당 기능을 이용자가 시작할 때 요청합니다. 거부하면 해당 검사 범위가 제한되지만 나머지 기능을 계속 이용할 수 있습니다. Android 14 이상에서 일부 사진·동영상만 승인된 경우 그 선택 범위만 검사하며 전체 라이브러리 검사로 표시하지 않습니다.</p>
-<h2>6. PC용 Recovery Doctor</h2>
-<p>모바일 검사에서 복구 단서를 확인하지 못한 경우 별도 PC용 Recovery Doctor의 Android 포렌식 사전 진단을 안내할 수 있으며, 이용자가 명시적으로 공식 안내 페이지를 열 수 있습니다. PC 포렌식 엔진은 휴대폰 앱에서 작동하지 않으며, DataRewind이 Windows 소프트웨어를 자동 설치·실행하거나 원격 포렌식 분석을 시작하지 않습니다. 일반 USB/ADB 연결만으로 암호화된 내부 영구 삭제 데이터 복구는 보장되지 않습니다.</p>
+<p>복구 작업 중 후보 파일과 작업 정보가 앱 내부 저장소에 임시로 생성될 수 있습니다. 사용자가 내보낸 파일은 사용자가 선택한 위치에 남으며, 앱 내부 임시 자료는 앱의 정리 기능으로 삭제할 수 있습니다.</p>
+<h2>5. 원본 보호</h2>
+<p>지원되는 USB/SD 복구 경로는 원본을 읽기 전용으로 취급하며 소스 쓰기 SCSI 명령을 구현하지 않습니다. 복구 전 원본 저장장치에 새 데이터를 쓰거나 포맷하지 마세요.</p>
+<h2>6. PC 정밀 복구</h2>
+<p>SD카드, USB/OTG 메모리 또는 외장 HDD에서 DataRewind로 원하는 파일을 찾지 못한 경우 별도 PC용 Recovery Doctor의 정밀 복구 안내 페이지를 열 수 있습니다. 이 연결은 외장 저장장치용 상위 복구 단계이며 휴대폰 내부 삭제 데이터 복구를 약속하지 않습니다.</p>
 <h2>7. 문의</h2><p>개인정보 및 지원: <a href="mailto:modernsnc2022@gmail.com">modernsnc2022@gmail.com</a></p>
 </section>
 <section id="en" lang="en"><h2>1. Scope</h2>
-<p>DataRewind performs user-initiated Android recovery discovery locally. It accesses only data made available by Android or explicitly authorized by the user: permitted photos, videos and audio; user-selected folders via the system file picker; and user-connected, user-authorized USB/SD mass storage. It does not claim raw recovery of permanently deleted internal UFS/userdata inaccessible to the app.</p>
+<p>DataRewind is an Android app for user-initiated recovery work on external storage that the user physically connects and authorizes.</p>
+<ul><li>USB drives</li><li>USB/OTG external storage</li><li>SD cards connected through a supported USB/OTG card reader</li></ul>
+<p>The intended v4 build does not request broad access to the phone's photo, video, or audio libraries and does not claim recovery of deleted photos or videos from Android internal storage.</p>
 <h2>2. Purposes</h2>
-<p>Authorized data is used on-device for recovery candidate scanning and classification, local preview, SHA-256 integrity verification and exact-byte correlation, user-requested export, or creation of a user-requested .rdcase handoff. Ordinary accessible files are not presented as recovered deleted originals. USB/SD RAW source-write SCSI commands are not implemented. Restoring an Android trash original requires system confirmation and user approval.</p>
-<h2>3. Transmission and sharing</h2>
-<p>The current app does not request the Android INTERNET permission and does not upload recovery content to a developer server. It has no advertising SDK, analytics tracking SDK, or app account system. The user may export to Downloads or a destination selected using Android's system picker; a cloud provider chosen by the user may process the exported file under its own policy.</p>
-<h2>4. Retention and deletion</h2>
-<p>App-private recovery candidates, temporary handoff files, and proof/session logs may be created during recovery. The in-app temporary-data cleanup removes these app-private materials, not original phone/USB/SD data or files already exported to a destination chosen by the user. App-private recovery evidence is excluded from Android cloud backup and device-to-device transfer rules.</p>
-<h2>5. Permissions</h2>
-<p>Permissions are requested when the user starts the relevant feature. Denial limits the corresponding scan but does not block other functions. On Android 14+, selected-photo/video access is treated as partial scope, not full-library access.</p>
-<h2>6. Separate PC application</h2>
-<p>After an authorized phone scan finds no recovery lead, DataRewind may show guidance for the separate PC Recovery Doctor Android forensic preflight and let the user explicitly open the official guidance page. The PC forensic engine does not run inside the phone app, and DataRewind does not automatically install or launch Windows software or start remote forensic analysis. Ordinary USB/ADB access cannot guarantee recovery of encrypted permanently deleted internal data.</p>
+<p>External-media data is processed locally for file-system inspection, read-only RAW/signature scanning, preview/search/filtering, SHA-256 integrity checks, and user-requested export.</p>
+<h2>3. Transmission</h2>
+<p>The current app does not request Android INTERNET permission and does not upload recovery content to a developer server. It has no advertising SDK, analytics SDK, or app account system.</p>
+<h2>4. Retention</h2>
+<p>Recovery candidates and work information may be created temporarily in app-private storage. User-exported files remain at the destination chosen by the user. App-private temporary recovery material can be removed using the in-app cleanup function.</p>
+<h2>5. Source protection</h2>
+<p>Supported USB/SD recovery paths treat the source as read-only and do not implement source-write SCSI commands. Do not write new data to or format the source before recovery.</p>
+<h2>6. PC deep recovery</h2>
+<p>If DataRewind cannot find the wanted file on an SD card, USB/OTG device, or external HDD, the user may open the separate Recovery Doctor PC deep-recovery guidance. This escalation path is for external storage and does not promise recovery of deleted Android internal-storage data.</p>
 <h2>7. Contact</h2><p>Support and privacy inquiries: <a href="mailto:modernsnc2022@gmail.com">modernsnc2022@gmail.com</a></p>
 </section></main></body></html>
