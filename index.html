@@ -7,7 +7,7 @@
 <section id="ko" lang="ko"><h2>1. 앱과 처리 범위</h2>
 <p>DataRewind은 사용자가 직접 연결하고 승인한 외장 저장장치의 복구 작업을 휴대폰에서 수행하는 Android 앱입니다.</p>
 <ul><li>USB 메모리</li><li>USB/OTG 외장 저장장치</li><li>지원되는 USB/OTG 카드리더에 연결한 SD카드</li></ul>
-<p>현재 v4는 휴대폰 사진·동영상·오디오 라이브러리 전체 접근 권한을 요청하지 않으며, 휴대폰 내부 저장소에서 삭제된 사진·동영상 복구를 제공한다고 주장하지 않습니다.</p>
+<p>현재 v4는 휴대폰 사진·동영상·오디오 라이브러리 전체 접근 권한을 요청하지 않으며, 휴대폰 내부 저장소에서 삭제된 사진·동영상 복구를 제공한다고 주장하지 않습니다. 휴대폰 내장 microSD 슬롯의 RAW 복구도 지원하지 않으며, SD카드는 USB/OTG 카드리더를 통해 연결해야 합니다.</p>
 <h2>2. 처리 목적</h2>
 <p>외장 저장장치의 파일시스템 확인, 읽기 전용 RAW/시그니처 검색, 복구 후보 미리보기·검색·필터, SHA-256 무결성 확인, 사용자가 요청한 복구 파일 내보내기에 사용합니다.</p>
 <h2>3. 서버 전송</h2>
@@ -23,7 +23,7 @@
 <section id="en" lang="en"><h2>1. Scope</h2>
 <p>DataRewind is an Android app for user-initiated recovery work on external storage that the user physically connects and authorizes.</p>
 <ul><li>USB drives</li><li>USB/OTG external storage</li><li>SD cards connected through a supported USB/OTG card reader</li></ul>
-<p>The intended v4 build does not request broad access to the phone's photo, video, or audio libraries and does not claim recovery of deleted photos or videos from Android internal storage.</p>
+<p>The intended v4 build does not request broad access to the phone's photo, video, or audio libraries and does not claim recovery of deleted photos or videos from Android internal storage. RAW recovery from the built-in microSD slot of a phone is also not supported; connect the SD card through a USB/OTG card reader.</p>
 <h2>2. Purposes</h2>
 <p>External-media data is processed locally for file-system inspection, read-only RAW/signature scanning, preview/search/filtering, SHA-256 integrity checks, and user-requested export.</p>
 <h2>3. Transmission</h2>
